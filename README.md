@@ -21,7 +21,8 @@ Terraform to add security group of ingress profile
   ]
 ```
 # After running terraform
-![terraform to aws instance ec2](https://imgur.com/mfgvrOJ)
+
+![terraform to aws instance ec2](https://user-images.githubusercontent.com/85982975/139412185-2957dac3-3b18-4906-8331-14bdda618cfd.png)
 
 # SSH into ec2 instance
 default user of ec2 : ec2-user
@@ -30,8 +31,7 @@ Login template:
 ```ssh -i "<your-key-pair>.pem" ec2-user@<-aws-instance-public-ip>```
 
 # Login to ec2 instance via SSH
-![log in successful to aws instance](https://imgur.com/s0EipDC)
-
+![log in successful to aws instance](https://user-images.githubusercontent.com/85982975/139412140-a738cfcd-aa17-456c-b432-77088c443f4d.png)
 
 
 # Special Flag for own ip
