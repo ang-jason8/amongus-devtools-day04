@@ -53,4 +53,10 @@ ingress {
   cidr_blocks = ["${chomp(data.http.myip.body)}/32"]
 }
 ```
+
+- Note I used terraform chomp() method to remove any trailing space or new line which comes with body.
+
+- You can use your ipv6 with http://ipv6.icanhazip.com. Take care by just using http://icanhazip.com because it can retrieve ipv4 or ipv6
+
+
 https://stackoverflow.com/questions/46763287/i-want-to-identify-the-public-ip-of-the-terraform-execution-environment-and-add
