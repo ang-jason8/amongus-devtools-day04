@@ -34,3 +34,20 @@ Login template:
 
 
 
+# Special Flag for own ip
+```
+data "http" "myip" {
+  url = "http://ipv4.icanhazip.com"
+}
+
+```
+And whenever you want to place your IP just use data.http.myip.body, example:
+```
+ingress {
+  from_port = 5432
+  to_port = 5432
+  protocol = "tcp"
+  cidr_blocks = ["${chomp(data.http.myip.body)}/32"]
+}
+```
+https://stackoverflow.com/questions/46763287/i-want-to-identify-the-public-ip-of-the-terraform-execution-environment-and-add
