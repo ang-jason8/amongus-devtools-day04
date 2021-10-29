@@ -30,7 +30,8 @@ default user of ec2 : ec2-user
 sudo ssh -i "Documents/PLAYGROUND/jasondevtools.pem" ec2-user@13.250.30.17 
 ```
 Login template:
-```ssh -i "<your-key-pair>.pem" ec2-user@<-aws-instance-public-ip>
+```
+ssh -i "<your-key-pair>.pem" ec2-user@<-aws-instance-public-ip>
 ```
 
 # Login to ec2 instance via SSH
