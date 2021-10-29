@@ -20,6 +20,20 @@ Terraform to add security group of ingress profile
     }
   ]
 ```
+
+Add key-pair that was created from the aws-console and tag the security group to the terraform instance resource definition
+
+```
+  # to add keypain
+  key_name = "jasondevtools"
+
+  # assign security groups
+
+  security_groups = [aws_security_group.allow_ssh.name,aws_security_group.allow_tls.name]
+
+```
+
+
 # After running terraform
 
 ![terraform to aws instance ec2](https://user-images.githubusercontent.com/85982975/139412185-2957dac3-3b18-4906-8331-14bdda618cfd.png)
